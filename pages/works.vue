@@ -1,5 +1,5 @@
 <template>
-    <div class="zyz"><p>PAGE CONTAINER</p></div>
+    <div class="zyz"><p>WORKS PAGE CONTAINER</p></div>
 </template>
 
 <script>
@@ -12,6 +12,6 @@ export default {
 .zyz {
   height: 100%;
   width: 100%;
-  background-color: rgb(202, 100, 63);
+  background-color: burlywood;
 }
 </style>

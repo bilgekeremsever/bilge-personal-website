@@ -30,7 +30,7 @@ export default {
       "@nuxtjs/fontawesome",
       {
         icons: {
-          solid: ["faHome", "faBriefcase"],
+          solid: ["faHome", "faBriefcase", "faAt"],
         },
       },
     ],

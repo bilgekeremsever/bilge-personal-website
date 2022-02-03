@@ -1,10 +1,10 @@
 <template>
-    <div class="zyz"><p>PAGE CONTAINER</p></div>
+    <div class="zyz"><p>Contact page container</p></div>
 </template>
 
 <script>
 export default {
-  name: "IndexPage",
+  name: "ContactPage",
 };
 </script>
 
@@ -12,6 +12,6 @@ export default {
 .zyz {
   height: 100%;
   width: 100%;
-  background-color: rgb(202, 100, 63);
+  background-color: cadetblue;
 }
 </style>
