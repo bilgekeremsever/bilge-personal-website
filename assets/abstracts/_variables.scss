@@ -4,5 +4,7 @@ $profile-card-bg-color: #292934;
 $inpage-bg-color: #22222D;
 
 $menu-list-item-dimension: 4.5rem; //height & width
-$menu-list-item-padding: .5rem;
 $menu-list-item-margin-y: .5rem;
+
+// transparent circle indicator on desktop
+$menu-indicator-diameter: calc($menu-list-item-dimension / 1.5);
