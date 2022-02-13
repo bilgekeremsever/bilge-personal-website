@@ -1,5 +1,70 @@
 <template>
-    <div class="zyz"><p>PAGE CONTAINER</p></div>
+    <div class="zyz"><p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    <p>PAGE CONTAINER</p>
+    </div>
 </template>
 
 <script>
@@ -10,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .zyz {
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: rgb(202, 100, 63);
 }

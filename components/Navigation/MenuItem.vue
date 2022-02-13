@@ -41,21 +41,35 @@ export default {
 
 <style lang="scss" scoped>
 .navigation-menu-item {
-  padding: 12px 0;
   display: block;
-  border-right: 1px solid $nav-menu-border-color;
-  transition: border-right 0.2s ease-out;
+
+  @include media-breakpoint-up(lg) {
+    padding: 12px 0;
+    border-right: 1px solid $nav-menu-border-color;
+    transition: border-right 0.2s ease-out;
+  }
 
   &.nuxt-link-exact-active {
-    border-right: 1px solid transparent;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid transparent;
+    }
     a {
-      border: 1px solid $nav-menu-border-color;
-      border-radius: 50%;
-      transform: translateX(2.5rem);
+      &::after {
+        width: 100%;
+      }
+      @include media-breakpoint-up(lg) {
+        border-radius: 50%;
+
+        border: 1px solid $nav-menu-border-color;
+        transform: translateX(2.5rem);
+      }
     }
   }
   a {
     cursor: pointer;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +79,20 @@ export default {
     text-decoration: none;
     text-align: center;
     background-color: $nav-menu-bg-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color: $yellow;
+
+      @include media-breakpoint-up(lg) {
+        content: none;
+      }
+    }
 
     svg {
       display: block;

@@ -15,7 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~assets/global.scss"],
+  css: ["~assets/style/global.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,7 +44,7 @@ export default {
 
   // https://github.com/nuxt-community/style-resources-module
   styleResources: {
-    scss: ["~assets/vendor/*.scss", "~assets/abstracts/*.scss"],
+    scss: ["~assets/style/vendor/*.scss", "~assets/style/abstracts/*.scss"],
     hoistUseStatements: true, // Hoists the "@use" imports. Applies only to "sass", "scss" and "less". Default: false.
   },
 };

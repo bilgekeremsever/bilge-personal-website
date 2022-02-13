@@ -10,7 +10,7 @@ export default {
 
 <style lang="scss" scoped>
 .zyz {
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: cadetblue;
 }
