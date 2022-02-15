@@ -6,7 +6,6 @@
         v-for="menuItem in menuItems"
         :key="menuItem.path"
         :menuItem="menuItem"
-        @click-link="setNavIndicatorIndex"
       />
     </ul>
     <div
@@ -37,9 +36,12 @@ export default {
       this.navIndicatorIndex = routeIndex;
     },
   },
+  watch: {
+      $route() {
+        this.setNavIndicatorIndex();
+      },
+    },
   created: function () {
-    // const startingRouteIndex = this.menuItems.findIndex(item => item.path == this.$route.path)
-    // this.navIndicatorIndex = startingRouteIndex;
     this.setNavIndicatorIndex();
   },
 };

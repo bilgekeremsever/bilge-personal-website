@@ -2,7 +2,7 @@
   <NuxtLink
     :to="{ path: menuItem.path }"
     custom
-    v-slot="{ href, isActive, isExactActive }"
+    v-slot="{ navigate, href, isActive, isExactActive }"
   >
     <li
       class="navigation-menu-item"
@@ -11,7 +11,7 @@
         isExactActive && 'nuxt-link-exact-active',
       ]"
     >
-      <a @click="clickLink(href)">
+      <a :href="href" @click="navigate">
         <font-awesome-icon :icon="['fas', menuItem.icon]" />{{ menuItem.text }}
       </a>
     </li>
@@ -23,18 +23,6 @@ export default {
   name: "NavigationMenuItem",
   props: {
     menuItem: Object,
-  },
-  methods: {
-    clickLink(href) {
-      this.$router.push(
-        {
-          path: href,
-        },
-        () => {
-          this.$emit("click-link");
-        }
-      );
-    },
   },
 };
 </script>
