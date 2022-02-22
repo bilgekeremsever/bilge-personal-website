@@ -12,6 +12,7 @@ export default {
 .zyz {
   height: auto;
   width: 100%;
+  min-height: 100vh;
   background-color: burlywood;
 }
 </style>

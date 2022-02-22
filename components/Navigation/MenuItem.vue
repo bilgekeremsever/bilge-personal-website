@@ -12,7 +12,7 @@
       ]"
     >
       <a :href="href" @click="navigate">
-        <font-awesome-icon :icon="['fas', menuItem.icon]" />{{ menuItem.text }}
+        <font-awesome-icon :icon="menuItem.icon" />{{ menuItem.text }}
       </a>
     </li>
   </NuxtLink>

@@ -1,12 +1,49 @@
 <template>
   <div class="profile-card">
-    <p>PROFILE CARD</p>
+    <div class="profile-photo">
+      <img src="~/assets/img/temp-pp.jpeg" />
+    </div>
+    <div class="info-area">
+      <h1>Bilge Kerem <strong>SEVER</strong></h1>
+      <h2>Front End Software Engineer</h2>
+    </div>
+    <div class="icon-area">
+      <a
+        v-for="socialIcon in socialIcons"
+        :key="socialIcon.icon"
+        :href="socialIcon.path"
+        target="_blank"
+      >
+        <font-awesome-icon :icon="[socialIcon.prefix, socialIcon.icon]" />
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "ProfileCard",
+  data: function () {
+    return {
+      socialIcons: [
+        {
+          icon: "linkedin",
+          prefix: "fab",
+          path: "https://www.linkedin.com/in/bilgekeremsever/",
+        },
+        {
+          icon: "envelope",
+          prefix: "far",
+          path: "mailto: bilgekerems@gmail.com",
+        },
+        {
+          icon: "github",
+          prefix: "fab",
+          path: "https://github.com/bilgekeremsever",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -19,6 +56,65 @@ export default {
     flex: 0 0 300px;
     order: 2;
     height: 100%;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    margin-bottom: calc($profile-card-pp-dimension / 2);
+
+    // '::after pseudo-class' is needed in order to use clip-path, while freely placing any element in .profile-photo
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+      background: url("~assets/img/temp-profile-card-bg.jpg") center bottom /
+        cover no-repeat;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      z-index: 2;
+      height: $profile-card-pp-dimension;
+      width: $profile-card-pp-dimension;
+      border-radius: 50%;
+    }
+  }
+
+  .info-area {
+    padding: 1rem 0 2rem;
+    h1,
+    h2 {
+      font-weight: 300;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: $yellow;
+    }
+  }
+  .icon-area {
+    text-align: center;
+    font-size: 1.5rem;
+    a {
+      padding: 0.5rem;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
   }
 }
 </style>

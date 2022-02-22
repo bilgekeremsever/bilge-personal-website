@@ -4,7 +4,7 @@
     <ul>
       <NavigationMenuItem
         v-for="menuItem in menuItems"
-        :key="menuItem.path"
+        :key="menuItem.icon"
         :menuItem="menuItem"
       />
     </ul>
@@ -21,6 +21,7 @@ export default {
   data: function () {
     return {
       menuItems: [
+        //prefix not needed since shorthand <fa /> assumes 'fas' as prefix
         { icon: "home", path: "/", text: "About" },
         { icon: "briefcase", path: "/works", text: "Works" },
         { icon: "at", path: "/contact", text: "Contact" },
@@ -58,11 +59,12 @@ export default {
     flex: 0 0 calc($menu-list-item-dimension);
     order: 1;
     align-self: flex-start;
-    margin: 0 10px 0;
+    margin: 0 .75rem 0 0;
     height: auto;
     width: calc($menu-list-item-dimension + 1px); // +1 for border of <li>
     background: transparent;
     position: relative;
+    z-index: 1;
   }
 
   ul {
@@ -108,7 +110,7 @@ export default {
       $menu-item-max-index: 2;
       @for $i from 0 through $menu-item-max-index {
         &[data-nav-indicator-index="#{$i}"] {
-          background-position: calc($menu-list-item-dimension + 1rem)
+          background-position: calc($menu-list-item-dimension + .25rem)
             $menu-indicator-diameter +
             (6rem * $i);
         }

@@ -49,8 +49,11 @@
   .app-wrapper {
     height: auto;
     width: 100%;
+    max-width: map-get($container-max-widths, 'sm');
+    margin: auto;
 
     @include media-breakpoint-up(lg) {
+      max-width: unset;
       position: absolute;
       height: 95vh;
       width: 95vw;
