@@ -5,7 +5,7 @@
     </div>
     <div class="info-area">
       <h1>Bilge Kerem <strong>SEVER</strong></h1>
-      <h2>Front End Software Engineer</h2>
+      <span>Front End Software Engineer</span>
     </div>
     <div class="icon-area">
       <a
@@ -53,7 +53,7 @@ export default {
   background-color: $profile-card-bg-color;
 
   @include media-breakpoint-up(lg) {
-    flex: 0 0 300px;
+    flex: 0 0 350px;
     order: 2;
     height: 100%;
   }
@@ -92,17 +92,20 @@ export default {
 
   .info-area {
     padding: 1rem 0 2rem;
-    h1,
-    h2 {
-      font-weight: 300;
+    & > * {
       text-align: center;
+      display: block;
     }
+
     h1 {
       font-size: 1.75rem;
+      font-weight: $font-weight-light;
     }
-    h2 {
+    span {
+      font-family: $font-family-monospace;
       font-size: 1.25rem;
       color: $yellow;
+      letter-spacing: -1px;
     }
   }
   .icon-area {

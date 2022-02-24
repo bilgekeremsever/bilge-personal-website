@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "bilge-personal-website",
+    title: "Bilge K. Sever",
     htmlAttrs: {
       lang: "en",
     },
@@ -11,7 +11,12 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://use.typekit.net/hap8mjy.css" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

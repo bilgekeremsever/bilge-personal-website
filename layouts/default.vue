@@ -53,15 +53,20 @@
     margin: auto;
 
     @include media-breakpoint-up(lg) {
-      max-width: unset;
+      max-width: map-get($grid-breakpoints, 'xl');
       position: absolute;
-      height: 95vh;
+      height: 85vh;
       width: 95vw;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
+    }
+
+    @media (min-width: 1600px){
+      max-width: map-get($grid-breakpoints, 'xxl');
+
     }
   }
 

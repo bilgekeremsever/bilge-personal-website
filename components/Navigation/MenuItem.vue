@@ -13,6 +13,7 @@
     >
       <a :href="href" @click="navigate">
         <font-awesome-icon :icon="menuItem.icon" />{{ menuItem.text }}
+        
       </a>
     </li>
   </NuxtLink>
@@ -57,6 +58,8 @@ export default {
   }
   a {
     cursor: pointer;
+    font-size: .9em;
+    text-transform: uppercase;
     position: relative;
     display: flex;
     justify-content: center;
@@ -84,6 +87,7 @@ export default {
 
     svg {
       display: block;
+      font-size: 1.25rem;
     }
   }
 }
