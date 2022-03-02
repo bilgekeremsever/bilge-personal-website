@@ -14,8 +14,14 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "stylesheet", href: "https://use.typekit.net/hap8mjy.css" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500&display=swap",
+      },
     ],
   },
 
@@ -23,7 +29,10 @@ export default {
   css: ["~assets/style/global.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: "~plugins/vueAgile.js" },
+    { src: "~plugins/vueCuteTimeline.js" },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,7 +44,7 @@ export default {
       "@nuxtjs/fontawesome",
       {
         icons: {
-          solid: ["faHome", "faBriefcase", "faAt"],
+          solid: ["faHome", "faBriefcase", "faAt", "faChevronRight", "faChevronLeft"],
           brands: ["faLinkedin", "faGithub"],
           regular: ["faEnvelope"],
         },
@@ -47,7 +56,9 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ["vue-agile"],
+  },
 
   // https://github.com/nuxt-community/style-resources-module
   styleResources: {

@@ -53,7 +53,7 @@ export default {
   background-color: $profile-card-bg-color;
 
   @include media-breakpoint-up(lg) {
-    flex: 0 0 350px;
+    flex: 0 0 30%;
     order: 2;
     height: 100%;
   }

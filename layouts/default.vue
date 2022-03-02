@@ -49,11 +49,11 @@
   .app-wrapper {
     height: auto;
     width: 100%;
-    max-width: map-get($container-max-widths, 'sm');
+    max-width: map-get($container-max-widths, "sm");
     margin: auto;
 
     @include media-breakpoint-up(lg) {
-      max-width: map-get($grid-breakpoints, 'xl');
+      max-width: map-get($grid-breakpoints, "xl");
       position: absolute;
       height: 85vh;
       width: 95vw;
@@ -64,23 +64,22 @@
       align-items: center;
     }
 
-    @media (min-width: 1600px){
-      max-width: map-get($grid-breakpoints, 'xxl');
-
+    @media (min-width: 1600px) {
+      max-width: map-get($grid-breakpoints, "xxl");
     }
   }
 
   #page-wrapper {
     height: auto;
     margin-bottom: 1rem;
+    background-color: $inpage-bg-color;
+    padding: 1rem;
 
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
-      flex-shrink: 0;
-      flex-grow: 1;
+      flex: 1 0 33%;
+      padding: 3rem;
       order: 3;
-      background-color: $inpage-bg-color;
-      padding: 1rem;
       height: 95%;
       overflow-y: scroll;
     }
