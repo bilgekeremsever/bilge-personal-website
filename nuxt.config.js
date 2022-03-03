@@ -44,7 +44,13 @@ export default {
       "@nuxtjs/fontawesome",
       {
         icons: {
-          solid: ["faHome", "faBriefcase", "faAt", "faChevronRight", "faChevronLeft"],
+          solid: [
+            "faHome",
+            "faBriefcase",
+            "faAt",
+            "faChevronRight",
+            "faChevronLeft",
+          ],
           brands: ["faLinkedin", "faGithub"],
           regular: ["faEnvelope"],
         },
