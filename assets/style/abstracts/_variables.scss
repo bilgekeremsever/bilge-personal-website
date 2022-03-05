@@ -6,10 +6,12 @@ $yellow: #ffca05;
 
 $default-layout-padding-y: 1rem;
 
-$menu-list-item-dimension: 4.5rem; //height & width
-$menu-list-item-margin-y: .5rem;
+$menu-link-dimension: 4.5rem; //height & width
+$menu-list-item-padding-y: .75rem;
+$menu-list-item-vertical: $menu-link-dimension+($menu-list-item-padding-y * 2);
+$number-of-menu-items: 3;
 
 // transparent circle indicator on desktop
-$menu-indicator-diameter: calc($menu-list-item-dimension / 1.5);
+$menu-indicator-radius: calc($menu-list-item-vertical / 2);
 
 $profile-card-pp-dimension: 150px;

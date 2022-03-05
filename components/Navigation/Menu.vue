@@ -38,10 +38,10 @@ export default {
     },
   },
   watch: {
-      $route() {
-        this.setNavIndicatorIndex();
-      },
+    $route() {
+      this.setNavIndicatorIndex();
     },
+  },
   created: function () {
     this.setNavIndicatorIndex();
   },
@@ -56,12 +56,12 @@ export default {
   background: $nav-menu-bg-color;
 
   @include media-breakpoint-up(lg) {
-    flex: 0 0 calc($menu-list-item-dimension);
+    flex: 0 0 calc($menu-link-dimension);
     order: 1;
     align-self: flex-start;
-    margin: 0 .75rem 0 0;
+    margin: 0 0.75rem 0 0;
     height: auto;
-    width: calc($menu-list-item-dimension + 1px); // +1 for border of <li>
+    width: calc($menu-link-dimension + 1px); // +1 for border of <li>
     background: transparent;
     position: relative;
     z-index: 1;
@@ -94,25 +94,22 @@ export default {
 
       transition: all 0.2s ease-out;
 
-      // below structure only works because this page has no scroll on desktop
-      //$nav-menu-border-color and $nav-menu-bg-color size has +1px for eliminating serrated borders
+      //$nav-menu-border-color and $nav-menu-bg-color size has - & + 1px for eliminating serrated borders
       background-image: radial-gradient(
-        circle,
+        circle at 4.75rem $menu-indicator-radius,
         transparent 0,
-        transparent $menu-indicator-diameter,
-        $nav-menu-border-color calc($menu-indicator-diameter + 1px),
-        $nav-menu-bg-color calc($menu-indicator-diameter + 2px)
+        transparent calc($menu-indicator-radius - 1px),
+        $nav-menu-border-color $menu-indicator-radius,
+        $nav-menu-bg-color calc($menu-indicator-radius + 1px)
       );
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-repeat: repeat-y;
+      background-size: $menu-link-dimension
+        calc($menu-list-item-vertical * 3);
 
       // move indicator according to routed page
-      $menu-item-max-index: 2;
-      @for $i from 0 through $menu-item-max-index {
+      @for $i from 0 through $number-of-menu-items - 1 {
         &[data-nav-indicator-index="#{$i}"] {
-          background-position: calc($menu-list-item-dimension + .25rem)
-            $menu-indicator-diameter +
-            (6rem * $i);
+          background-position: 0 calc($menu-list-item-vertical * $i);
         }
       }
     }

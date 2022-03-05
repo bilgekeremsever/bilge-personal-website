@@ -33,7 +33,7 @@ export default {
   display: block;
 
   @include media-breakpoint-up(lg) {
-    padding: 12px 0;
+    padding: $menu-list-item-padding-y 0;
     border-right: 1px solid $nav-menu-border-color;
     transition: border-right 0.2s ease-out;
   }
@@ -65,8 +65,8 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: $menu-list-item-dimension;
-    width: $menu-list-item-dimension;
+    height: $menu-link-dimension;
+    width: $menu-link-dimension;
     text-decoration: none;
     text-align: center;
     background-color: $nav-menu-bg-color;
