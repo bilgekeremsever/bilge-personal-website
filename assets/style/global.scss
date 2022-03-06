@@ -2,6 +2,22 @@
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
 
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $nav-menu-border-color;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
 // project-wide transition
 a,
 a::after {
@@ -34,8 +50,7 @@ main {
   width: 100%;
   min-height: 100vh;
 
-  & > section {
+  &>section {
     margin-bottom: 3rem;
   }
 }
-

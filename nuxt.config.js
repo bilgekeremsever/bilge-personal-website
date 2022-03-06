@@ -75,7 +75,6 @@ export default {
   // https://nuxtjs.org/docs/configuration-glossary/configuration-router/
   router: {
     // Skip profile card on routed page by scrolling in mobile view.
-    // Due to the fact that there is no 'body vertical overflow (scrolling)' on desktop view, this configuration doesn't need more specification.
     scrollBehavior(to, from, savedPosition) {
       if (window.innerWidth < 992)
         return savedPosition ?? { x: 0, y: window.innerHeight };

@@ -54,6 +54,8 @@ export default {
   bottom: 0;
   left: 0;
   background: $nav-menu-bg-color;
+  z-index: 9;
+
 
   @include media-breakpoint-up(lg) {
     flex: 0 0 calc($menu-link-dimension);
@@ -64,7 +66,6 @@ export default {
     width: calc($menu-link-dimension + 1px); // +1 for border of <li>
     background: transparent;
     position: relative;
-    z-index: 1;
   }
 
   ul {
