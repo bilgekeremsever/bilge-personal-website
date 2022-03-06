@@ -181,6 +181,10 @@ export default {
   }
 
   .agile {
+    &__list{
+      z-index: 2;
+    }
+    
     &__actions {
       height: 100%;
       width: 100%;
@@ -188,6 +192,7 @@ export default {
       top: 0;
       left: 0;
       align-items: center;
+      z-index: 1;
     }
 
     &__dots {
