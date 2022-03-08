@@ -63,7 +63,7 @@ export default {
     align-self: flex-start;
     margin: 0 0.75rem 0 0;
     height: auto;
-    width: calc($menu-link-dimension + 1px); // +1 for border of <li>
+    width: $menu-link-dimension;
     background: transparent;
     position: relative;
   }

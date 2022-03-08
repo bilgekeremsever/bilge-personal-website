@@ -13,7 +13,6 @@
     >
       <a :href="href" @click="navigate">
         <font-awesome-icon :icon="menuItem.icon" />{{ menuItem.text }}
-        
       </a>
     </li>
   </NuxtLink>
@@ -35,7 +34,7 @@ export default {
   @include media-breakpoint-up(lg) {
     padding: $menu-list-item-padding-y 0;
     border-right: 1px solid $nav-menu-border-color;
-    transition: border-right 0.2s ease-out;
+    transition: border-right 0.2s ease-out, background-color 0.2s ease-out;
   }
 
   &.nuxt-link-exact-active {
@@ -53,12 +52,13 @@ export default {
 
         border: 1px solid $nav-menu-border-color;
         transform: translateX(2.5rem);
+        background-color: $nav-menu-bg-color;
       }
     }
   }
   a {
     cursor: pointer;
-    font-size: .9em;
+    font-size: 0.9em;
     text-transform: uppercase;
     position: relative;
     display: flex;
@@ -69,7 +69,7 @@ export default {
     width: $menu-link-dimension;
     text-decoration: none;
     text-align: center;
-    background-color: $nav-menu-bg-color;
+    background-color: transparent;
 
     &::after {
       content: "";
