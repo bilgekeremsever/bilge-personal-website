@@ -76,8 +76,16 @@ export default {
   router: {
     // Skip profile card on routed page by scrolling in mobile view.
     scrollBehavior(to, from, savedPosition) {
-      if (window.innerWidth < 992)
-        return savedPosition ?? { x: 0, y: window.innerHeight };
+      if (window.innerWidth < 992) {
+        // get position of the page-wrapper relative to document
+        const totalScrolled =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const pageWrapperScrollPosition = document
+          .querySelector("#page-wrapper")
+          .getBoundingClientRect().top;
+        const toBeScrolled = totalScrolled + pageWrapperScrollPosition;
+        return savedPosition ?? { x: 0, y: toBeScrolled };
+      }
       return savedPosition ?? { x: 0, y: 0 };
     },
   },
