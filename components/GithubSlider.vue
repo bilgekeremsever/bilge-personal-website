@@ -60,6 +60,7 @@ export default {
 // CAREFUL! Styling is not scoped in this component due to runtime generated 'slider' element.
 .github-carousel {
   position: relative;
+  margin-bottom: 1.5rem;
 
   .repo {
     display: block;

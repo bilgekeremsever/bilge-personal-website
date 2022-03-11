@@ -51,6 +51,17 @@ main {
   min-height: 100vh;
 
   &>section {
+    padding-bottom: 3rem;
     margin-bottom: 3rem;
+
+    border-bottom: 1px solid $profile-card-bg-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
