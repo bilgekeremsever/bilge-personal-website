@@ -56,6 +56,21 @@ export default {
     flex: 0 0 320px;
     order: 2;
     height: 100%;
+    position: relative;
+    box-shadow: 8px 0 16px -3px $nav-menu-bg-color, -8px 0 16px -2px $nav-menu-bg-color;
+
+    &::before {
+      // This pseudo element is a quick adaptation to a design change. Entire layout rearrangement is needed.
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -1.5rem;
+      width: 1.5rem;
+      height: 95%;
+      transform: translateY(-50%);
+      z-index: -1;
+      background-color: $inpage-bg-color;
+    }
   }
 
   .profile-photo {
