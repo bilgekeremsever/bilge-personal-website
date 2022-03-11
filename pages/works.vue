@@ -5,31 +5,9 @@
         <span>Github</span>
       </h2>
       <p v-if="$fetchState.pending">Loading....</p>
-      <p v-else-if="$fetchState.error">Error while fetching mountains</p>
+      <p v-else-if="$fetchState.error">Error while fetching GitHub data.</p>
       <client-only v-else placeholder="Loading...">
-        <agile :options="githubSlideOptions" class="github-carousel">
-          <div v-for="item in githubItems" :key="item.id">
-            <a :href="item.html_url" target="_blank" class="repo">
-              <p class="repo-name">{{ item.name }}</p>
-              <p class="repo-language">
-                <span
-                  class="repo-language-color"
-                  style="background-color: #41b883"
-                  :style="{
-                    backgroundColor: githubLanguageColors[item.language],
-                  }"
-                ></span>
-                {{ item.language }}
-              </p>
-            </a>
-          </div>
-          <template slot="prevButton">
-            <font-awesome-icon icon="chevron-left" />
-          </template>
-          <template slot="nextButton">
-            <font-awesome-icon icon="chevron-right" />
-          </template>
-        </agile>
+        <GithubSlider :githubItems="githubItems" />
       </client-only>
     </section>
 
@@ -37,49 +15,18 @@
       <h2>
         <span>Experience</span>
       </h2>
-      <timeline>
-        <timeline-item
-          font-color="#fff"
-          v-for="item in workExperienceItems"
-          :key="item.workplace"
-        >
-          <span class="timeline-workplace">{{ item.workplace }}</span>
-          <span class="timeline-date">{{ item.date }}</span>
-          <div class="timeline-description">
-            <ul>
-              <li v-for="(desc, i) in item.description" :key="i">
-                {{ desc }}
-              </li>
-            </ul>
-          </div>
-        </timeline-item>
-      </timeline>
+      <ExperienceTimeline :workExperienceItems="workExperienceItems" />
     </section>
   </main>
 </template>
 
 <script>
-import "../node_modules/vue-cute-timeline/dist/index.css";
 
 export default {
   name: "IndexPage",
   data: function () {
     return {
       githubItems: [],
-      githubSlideOptions: {
-        slidesToShow: 1,
-        infinite: false,
-        navButtons: false,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              navButtons: true,
-              slidesToShow: 2,
-            },
-          },
-        ],
-      },
       workExperienceItems: [
         {
           workplace: "Crema",
@@ -130,11 +77,6 @@ export default {
           role: "intern",
         },
       ],
-      githubLanguageColors: {
-        //the following repo can be fetched but unnecessary in this situation: https://github.com/ozh/github-colors
-        Vue: "#41b883",
-        JavaScript: "#f1e05a",
-      },
     };
   },
   async fetch() {
@@ -148,141 +90,5 @@ export default {
 </script>
 
 <style lang="scss">
-// CAREFUL! Styling is not scoped in this page due to runtime generated 'slider' & 'timeline' elements
-.github-carousel {
-  position: relative;
 
-  .repo {
-    display: block;
-    padding: 1rem;
-    border: 1px solid $nav-menu-border-color;
-    border-radius: 1rem;
-    text-decoration: none;
-    &-name {
-      font-size: 0.875rem;
-      font-weight: $font-weight-bolder;
-      margin-bottom: 0.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    &-language {
-      font-size: 0.75rem;
-      margin-bottom: 0;
-
-      &-color {
-        vertical-align: middle;
-        display: inline-block;
-        height: 0.75rem;
-        width: 0.75rem;
-        border-radius: 50%;
-      }
-    }
-  }
-
-  .agile {
-    &__list{
-      z-index: 2;
-    }
-    
-    &__actions {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      align-items: center;
-      z-index: 1;
-    }
-
-    &__dots {
-      align-self: flex-end;
-      margin-bottom: -1.5rem;
-    }
-
-    &__dot {
-      display: inline-block;
-      padding: 0 2px;
-      button {
-        padding: 0;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        background: transparent;
-        width: 0.7rem;
-        height: 0.7rem;
-      }
-      &--current button {
-        background: radial-gradient(#fff 50%, transparent calc(50% + 1px));
-      }
-    }
-
-    &__nav-button {
-      color: #fff;
-      background: transparent;
-      border: none;
-      font-size: 1.5rem;
-      padding: 0;
-
-      &[disabled="disabled"] {
-        opacity: 0.4;
-      }
-
-      &--prev {
-        transform: translateX(-150%);
-      }
-      &--next {
-        transform: translateX(150%);
-      }
-    }
-
-    //create a space between two active slides on desktop
-    &__slide--current {
-      @include media-breakpoint-up(lg) {
-        //first
-        padding: 0 0.5rem 0 0;
-      }
-    }
-    &__slide--current:not(.agile__slide--active) {
-      @include media-breakpoint-up(lg) {
-        //second
-        padding: 0 0 0 0.5rem;
-      }
-    }
-  }
-}
-
-$circle-dimension: 12px;
-.timeline {
-  font-family: inherit;
-  margin: 10px calc($circle-dimension / 2);
-  &::after {
-    width: 2px;
-    background-color: $nav-menu-border-color;
-  }
-
-  &-circle {
-    left: -33px;
-    width: $circle-dimension;
-    height: $circle-dimension;
-    background-color: $yellow;
-    border: none;
-  }
-
-  span {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  &-workplace {
-    font-size: 1rem;
-    font-weight: $headings-font-weight;
-  }
-  &-date {
-    font-size: 0.875rem;
-    font-weight: $font-weight-lighter;
-  }
-  &-description {
-    font-size: 0.9rem;
-  }
-}
 </style>

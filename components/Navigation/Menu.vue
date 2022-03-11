@@ -21,8 +21,8 @@ export default {
   data: function () {
     return {
       menuItems: [
-        //prefix not needed since shorthand <fa /> assumes 'fas' as prefix
-        { icon: "home", path: "/", text: "About" },
+        // Svg file names from ~assets/icons
+        { icon: "house", path: "/", text: "About" },
         { icon: "briefcase", path: "/works", text: "Works" },
         { icon: "at", path: "/contact", text: "Contact" },
       ],

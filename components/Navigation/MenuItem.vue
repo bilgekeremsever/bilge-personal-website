@@ -12,7 +12,8 @@
       ]"
     >
       <a :href="href" @click="navigate">
-        <font-awesome-icon :icon="menuItem.icon" />{{ menuItem.text }}
+        <img :src="require(`~/assets/icons/${menuItem.icon}.svg`)" />
+        {{ menuItem.text }}
       </a>
     </li>
   </NuxtLink>
@@ -85,9 +86,8 @@ export default {
       }
     }
 
-    svg {
-      display: block;
-      font-size: 1.25rem;
+    img {
+      width: 1.5rem;
     }
   }
 }
