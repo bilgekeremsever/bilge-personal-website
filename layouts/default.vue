@@ -42,7 +42,7 @@
       left: 0px;
       height: 100%;
       width: 100%;
-      opacity: 0.4;
+      opacity: 0.3;
     }
   }
 
@@ -78,7 +78,7 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
       flex: 1 0 33%;
-      padding: 3rem;
+      padding: 3rem 4rem;
       order: 3;
       height: 95%;
       overflow-y: scroll;
