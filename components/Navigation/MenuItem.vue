@@ -59,7 +59,7 @@ export default {
   }
   a {
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: .75rem;
     text-transform: uppercase;
     position: relative;
     display: flex;
