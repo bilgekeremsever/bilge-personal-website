@@ -68,6 +68,7 @@ export default {
     border: 1px solid $nav-menu-border-color;
     border-radius: 1rem;
     text-decoration: none;
+    cursor: grab;
     &-name {
       font-size: 0.875rem;
       font-weight: $font-weight-bolder;
@@ -93,6 +94,7 @@ export default {
   .agile {
     &__list {
       z-index: 2;
+      cursor: grab;
     }
 
     &__actions {

@@ -17,6 +17,11 @@
         <font-awesome-icon :icon="[socialIcon.prefix, socialIcon.icon]" />
       </a>
     </div>
+    <div class="resume-area">
+      <a href="/pdf/Resume-BilgeSever.pdf" target="_blank">
+        Download CV <img src="~assets/icons/arrow-right-yellow.svg" alt="" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -57,7 +62,8 @@ export default {
     order: 2;
     height: 100%;
     position: relative;
-    box-shadow: 8px 0 16px -3px $nav-menu-bg-color, -8px 0 16px -2px $nav-menu-bg-color;
+    box-shadow: 8px 0 16px -3px $nav-menu-bg-color,
+      -8px 0 16px -2px $nav-menu-bg-color;
 
     &::before {
       // This pseudo element is a quick adaptation to a design change. Entire layout rearrangement is needed.
@@ -131,6 +137,17 @@ export default {
 
       &:hover {
         color: $yellow;
+      }
+    }
+  }
+  .resume-area {
+    padding: 1rem 0 0;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $yellow;
+      &:hover {
+        border-bottom: 1px solid $yellow;
       }
     }
   }
