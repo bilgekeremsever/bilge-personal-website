@@ -4,7 +4,7 @@
       <img src="~/assets/img/temp-pp.jpeg" />
     </div>
     <div class="info-area">
-      <h1>Bilge Kerem <strong>SEVER</strong></h1>
+      <h1>"Ethan" Bilge <strong>SEVER</strong></h1>
       <span>Front End Software Engineer</span>
     </div>
     <div class="icon-area">
