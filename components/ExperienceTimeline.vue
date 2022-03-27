@@ -5,6 +5,7 @@
       v-for="item in workExperienceItems"
       :key="item.workplace"
     >
+      <span class="timeline-position">{{ item.position }}</span>
       <span class="timeline-workplace">{{ item.workplace }}</span>
       <span class="timeline-date">{{ item.date }}</span>
       <div class="timeline-description">
@@ -53,13 +54,17 @@ $circle-dimension: 12px;
     margin-bottom: 0.5rem;
   }
 
-  &-workplace {
+  &-position {
     font-size: 1rem;
     font-weight: $headings-font-weight;
   }
-  &-date {
+  &-date,
+  &-workplace {
     font-size: 0.875rem;
     font-weight: $font-weight-lighter;
+  }
+  &-workplace {
+    margin-bottom: 0.25rem !important;
   }
   &-description {
     font-size: 0.9rem;

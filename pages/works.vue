@@ -29,7 +29,8 @@ export default {
       githubItems: [],
       workExperienceItems: [
         {
-          workplace: "Crema",
+          position: "Front End Developer",
+          workplace: "Crema Communication Services LTD, Remote / Turkey",
           date: "March 2021 - March 2022",
           description: [
             "Developing various web projects mostly in finance industry from initial design through completion.",
@@ -39,7 +40,8 @@ export default {
           role: "intern",
         },
         {
-          workplace: "Nette Interactive",
+          position: "Software Engineer",
+          workplace: "Nette Interactive, Bursa / Turkey",
           date: "August 2020 - February 2021",
           description: [
             "Developed B2B-B2C systems, e-commerce sites, corporate websites and specialized web projects in a software team to meet customers’ requests.",
@@ -49,7 +51,8 @@ export default {
           role: "intern",
         },
         {
-          workplace: "Eddra - Event Activities Agency",
+          position: "Software Expert",
+          workplace: "Event Activities Agency EDDRA, Istanbul / Turkey ",
           date: "February 2020 - July 2020",
           description: [
             "Taking role as both front end developer and Laravel based fullstack developer on various projects.",
@@ -58,7 +61,8 @@ export default {
           role: "intern",
         },
         {
-          workplace: "Ziraat Technology",
+          position: "Software Engineering Intern",
+          workplace: "Ziraat Technology INC, Istanbul / Turkey",
           date: "August 2018",
           description: [
             "Supported software engineering projects in agile work environment.",
@@ -67,7 +71,8 @@ export default {
           role: "intern",
         },
         {
-          workplace: "CTech",
+          position: "Software Engineering Intern",
+          workplace: "CTech IT Industry and Trade INC, Istanbul / Turkey",
           date: "June 2018",
           description: [
             "Translated techical concepts and informations into terms all parties could easily comprehend.",
