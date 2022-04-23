@@ -5,7 +5,7 @@
     </div>
     <div class="info-area">
       <h1>"Ethan" Bilge <strong>SEVER</strong></h1>
-      <span>Front End Software Engineer</span>
+      <span>Front End Software Engineering</span>
     </div>
     <div class="icon-area">
       <a
@@ -18,8 +18,8 @@
       </a>
     </div>
     <div class="resume-area">
-      <a href="/pdf/Resume-BilgeSever.pdf" target="_blank">
-        Download CV <img src="~assets/icons/arrow-right-yellow.svg" alt="" />
+      <a href="/pdf/Resume-EthanBilgeSever-20220422.pdf" target="_blank">
+        Download Resume <img src="~assets/icons/arrow-right-yellow.svg" alt="" />
       </a>
     </div>
   </div>
